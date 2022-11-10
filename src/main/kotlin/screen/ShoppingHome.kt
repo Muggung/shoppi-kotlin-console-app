@@ -4,7 +4,7 @@ class ShoppingHome {
 
     fun start () {
         showWelcomeMessage()
-        showCatergories()
+        showCategories()
     }
 
     private fun showWelcomeMessage() {
@@ -22,8 +22,8 @@ class ShoppingHome {
         )
     }
 
-    private fun showCatergories() {
-        val shoppingCatergory = ShoppingCatergory()
-        shoppingCatergory.showCatergories()
+    private fun showCategories() {
+        val shoppingCategory = ShoppingCategory()
+        shoppingCategory.showCategories()
     }
 }

@@ -1,8 +1,8 @@
 package screen
 
-class ShoppingCatergory {
+class ShoppingCategory {
 
-    fun showCatergories() {
+    fun showCategories() {
         val categories = arrayOf("패션", "전자기기", "반려동물용품")
         for (category in categories) {
             println(category)
@@ -17,9 +17,9 @@ class ShoppingCatergory {
         if (selectedCategory == "#") {
             // TODO 1. 장바구니 이동
         } else {
-            // TODO 2. 카테고리 상품 목록 보여주기
             if(categories.contains(selectedCategory)) {
-
+                val shoppingProductList = ShoppingProductList()
+                shoppingProductList.showProducts(selectedCategory)
             } else {
                 showErrorMessage(selectedCategory)
             }
@@ -28,6 +28,6 @@ class ShoppingCatergory {
 
     private fun showErrorMessage(selectedCategory: String?) {
         println("[$selectedCategory] : 존재하지 않는 카테고리 입니다. 다시 입력 해주세요.")
-        showCatergories()
+        showCategories()
     }
 }
